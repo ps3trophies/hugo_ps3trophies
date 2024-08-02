@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+<div class="top_contents">
+    {{ partial "side_column.html" . }}
+    <div>
+        <div class="infotablearea_head">タイトル</div>
+        <table>
+            {{ range (.Paginator 10).Pages }}
+            <tr>
+                <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+            </tr>
+            {{ end }}
+        </table>
+    </div>
+</div>
+{{ partial "footer.html" . }}

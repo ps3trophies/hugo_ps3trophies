@@ -1,0 +1,4 @@
+baseURL = 'https://ps3trophies.github.io'
+languageCode = 'ja-jp'
+title = 'PS3トロフィーWiki'
+disqusShortname = "https-ps3trophies-github-io"

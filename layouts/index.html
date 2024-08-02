@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+<div class="top_contents">
+    {{ partial "side_column.html" . }}
+    <div class="infotablearea">
+        <a>PS3ソフトのトロフィーまとめwikiになります。各タイトルのトロフィー情報、トロフィーに関する情報交換にご活用ください。</a>
+        <div class="infotablearea_head">ディスクタイトル新着記事</div>
+        <div class="infotable">
+            {{ range where .Site.RegularPages "Section" "disctitles" }}
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a><br />
+            {{ end }}
+        </div>
+
+        <div class="infotablearea_head">DLタイトル新着記事</div>
+        <div class="infotable">
+            {{ range where .Site.RegularPages "Section" "downloadtitles" }}
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a><br />
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ partial "footer.html" . }}
