@@ -3,7 +3,7 @@ name: github pages
 on:
   push:
     branches:
-      - main  # Set a branch name to trigger deployment
+      - master  # Set a branch name to trigger deployment
 
 jobs:
   deploy:
@@ -27,5 +27,4 @@ jobs:
         with:
           deploy_key: ${{ secrets.rfbJqOSUzqo92YIFcVRIVN5CFNaPgrIcJ3WJ+JU0a+Q }}
           external_repository: ps3trophies/ps3trophies.github.io
-          publish_branch: main
-          cname: ps3trophies.com
+          publish_branch: master
