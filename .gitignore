@@ -1,2 +1,5 @@
 # フォルダ除外
 public/
+
+# ファイル除外
+*.hugo_build.lock
