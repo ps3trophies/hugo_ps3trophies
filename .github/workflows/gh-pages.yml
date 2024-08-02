@@ -25,6 +25,6 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.rfbJqOSUzqo92YIFcVRIVN5CFNaPgrIcJ3WJ+JU0a+Q }}
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
           external_repository: ps3trophies/ps3trophies.github.io
           publish_branch: master
