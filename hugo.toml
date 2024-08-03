@@ -2,3 +2,13 @@ baseURL = 'https://ps3trophies.github.io'
 languageCode = 'ja-jp'
 title = 'PS3トロフィーまとめWiki'
 disqusShortname = "https-ps3trophies-github-io"
+
+# Markdown内でHTMLを直接書けるようになる
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Markdown内で任意のブロックにCSSを指定できるようになる
+[markup.goldmark.parser.attribute]
+block = true
