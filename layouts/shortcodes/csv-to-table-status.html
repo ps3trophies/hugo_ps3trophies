@@ -1,0 +1,33 @@
+{{ $rows := "" }}
+{{ $filename := .Get 0 }}
+{{ with resources.Get $filename }}
+    {{ $options := dict "delimiter" "," }}
+    {{ $rows = .Content | transform.Unmarshal $options }}
+    {{ $headerRow := index $rows 0 }}
+    {{ $dataRows := after 1 $rows }}
+    <table>
+        <thead>
+            <tr>
+                {{ range $headerRow }}
+                <th>{{ . }}</th>
+                {{ end }}
+            </tr>
+        </thead>
+        <tbody>
+            {{ range $rowIndex, $columns := $dataRows }}
+            <tr>
+                {{ range $index, $col := $columns }}
+                    {{ if eq $index 3 }}
+                        <td style="text-align:left">{{ . }}</td>
+                    {{ else }}
+                        <td style="text-align:center">{{ . }}</td>
+                    {{ end }}
+                {{ end }}
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+{{ else }}
+    {{ errorf "Unable to get the page resource: %q" $filename }}
+    <p>CSV file not found: {{ $filename }}</p>
+{{ end }}
