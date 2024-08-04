@@ -2,7 +2,8 @@
 <div class="top_contents">
     {{ partial "side_column.html" . }}
     <div class="infotablearea">
-        <a>PS3ソフトのトロフィーまとめwikiになります。各タイトルのトロフィー情報、トロフィーに関する情報交換にご活用ください。</a>
+        <a>PS3ソフトのトロフィーまとめwikiになります。各タイトルのトロフィー情報、トロフィーに関する情報交換にご活用ください。</a><br />
+        <a href="{{ "ページ編集のリクエスト/index.html" | absURL }}">ページの編集方法</a><br />
         <div class="infotablearea_head">ディスクタイトル新着記事</div>
         <div class="infotable">
             {{ range where .Site.RegularPages "Section" "disctitles" }}
