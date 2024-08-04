@@ -3,6 +3,9 @@ languageCode = 'ja-jp'
 title = 'PS3トロフィーまとめWiki'
 disqusShortname = "https-ps3trophies-github-io"
 
+[params]
+  editBaseURL = "https://github.com/ps3trophies/hugo_ps3trophies/edit/master/content"
+
 # Markdown内でHTMLを直接書けるようになる
 [markup]
   [markup.goldmark]
