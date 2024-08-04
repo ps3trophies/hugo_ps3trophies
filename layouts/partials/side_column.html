@@ -4,7 +4,7 @@
             <details>
                 <summary class="side_column_area_head">PS3ディスクタイトル</summary>
                 {{ range where .Site.RegularPages "Section" "disctitles" }}
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a><br />
+                    <a href="{{ .RelPermalink }}" style="padding-left: 1rem">{{ .Title }}</a><br />
                 {{ end }}
             </details>
         </div>
@@ -19,7 +19,7 @@
             <details>
                 <summary class="side_column_area_head">DL配信タイトル</summary>
                 {{ range where .Site.RegularPages "Section" "downloadtitles" }}
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a><br />
+                    <a href="{{ .RelPermalink }}" style="padding-left: 1rem">{{ .Title }}</a><br />
                 {{ end }}
             </details>
         </div>

@@ -1,10 +1,10 @@
 ---
-title: "100円ゴミ箱"
+title: "2014 FIFA World Cup Brazil"
 draft: false
-tags: [ "バラエティ・パズル" ]
+tags: [ "スポーツ" ]
 ---
 
-### 100円ゴミ箱 {.deco_background #title}
+### タイトル {.deco_background #title}
 
 - [獲得情報](#information)
 - [メモ](#memo)
