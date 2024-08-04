@@ -3,6 +3,7 @@ languageCode = 'ja-jp'
 title = 'PS3トロフィーまとめWiki'
 disqusShortname = "https-ps3trophies-github-io"
 
+# Web上でのページ編集に使う
 [params]
   editBaseURL = "https://github.com/ps3trophies/hugo_ps3trophies/edit/master/content"
 

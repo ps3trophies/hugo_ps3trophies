@@ -1,0 +1,37 @@
+---
+title: "Back to the Future - Episode 1： It's About Time"
+draft: false
+tags: [ "アドベンチャー" ]
+---
+
+### タイトル {.deco_background #title}
+
+- [獲得情報](#information)
+- [メモ](#memo)
+- [製品情報](#release)
+
+---
+
+### [獲得情報](#title) {#information}
+
+- 項目数：
+- プラチナ：
+- ゴールド：
+- シルバー：
+- ブロンズ：
+- 合計トロフィーポイント：
+
+
+| | タイトル | 詳細情報 |
+| :----: | :----: | :---- |
+| | | |
+
+
+### [メモ](#title) {#memo}
+
+| 廉価版 | 海外版トロフィー | オンライントロフィー | 備考 |
+| :----: | :----: | :----: | :----: |
+| | | | |
+
+
+### [製品情報](#title) {#release}

@@ -1,10 +1,21 @@
-<div class="side_column_area">
+<div id="side_column_area">
     <div>
         <div>
             <details>
-                <summary class="side_column_area_head">PS3ディスクタイトル</summary>
-                {{ range where .Site.RegularPages "Section" "disctitles" }}
-                    <a href="{{ .RelPermalink }}" style="padding-left: 1rem">{{ .Title }}</a><br />
+                <summary id="side_column_area_head">PS3ディスクタイトル</summary>
+                <!--サイト内の全タグをループする-->
+                {{- range $termName, $entries := .Site.Taxonomies.tags }}
+                <details>
+                    <!--タグ名表示する-->
+                    <summary id="side_column_area_tag">{{ strings.ToUpper $termName }}</summary>
+                    <!--タグが一致するページでループ-->
+                    {{  range $page := $entries.Pages }}
+                        <!--PS3ディスクタイトルを表示する-->
+                        {{ if eq $page.Section "disctitles" }}
+                            <a href="{{ .RelPermalink }}" id="side_column_area_title">{{ $page.Title }}</a><br />
+                        {{ end }}
+                    {{ end }}
+                </details>
                 {{ end }}
             </details>
         </div>
@@ -17,15 +28,78 @@
     <div>
         <div>
             <details>
-                <summary class="side_column_area_head">DL配信タイトル</summary>
-                {{ range where .Site.RegularPages "Section" "downloadtitles" }}
-                    <a href="{{ .RelPermalink }}" style="padding-left: 1rem">{{ .Title }}</a><br />
+                <summary id="side_column_area_head">PS3ディスクタイトル（海外対応）</summary>
+                <!--サイト内の全タグをループする-->
+                {{- range $termName, $entries := .Site.Taxonomies.tags }}
+                <details>
+                    <!--タグ名表示する-->
+                    <summary id="side_column_area_tag">{{ strings.ToUpper $termName }}</summary>
+                    <!--タグが一致するページでループ-->
+                    {{  range $page := $entries.Pages }}
+                        <!--PS3ディスクタイトルを表示する-->
+                        {{ if eq $page.Section "overseasdisctitles" }}
+                            <a href="{{ .RelPermalink }}" id="side_column_area_title">{{ $page.Title }}</a><br />
+                        {{ end }}
+                    {{ end }}
+                </details>
+                {{ end }}
+            </details>
+        </div>
+        <div>
+            <!--タイトル一覧にはルートindex.htmlからの絶対パスでリンク指定-->
+            <a href="{{ "overseasdisctitles/index.html" | absURL }}">タイトル一覧</a>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <details>
+                <summary id="side_column_area_head">DL配信タイトル</summary>
+                <!--サイト内の全タグをループする-->
+                {{- range $termName, $entries := .Site.Taxonomies.tags }}
+                <details>
+                    <!--タグ名表示する-->
+                    <summary id="side_column_area_tag">{{ strings.ToUpper $termName }}</summary>
+                    <!--タグが一致するページでループ-->
+                    {{  range $page := $entries.Pages }}
+                        <!--DL配信タイトルを表示する-->
+                        {{ if eq $page.Section "downloadtitles" }}
+                            <a href="{{ .RelPermalink }}" id="side_column_area_title">{{ $page.Title }}</a><br />
+                        {{ end }}
+                    {{ end }}
+                </details>
                 {{ end }}
             </details>
         </div>
         <div>
             <!--タイトル一覧にはルートindex.htmlからの絶対パスでリンク指定-->
             <a href="{{ "downloadtitles/index.html" | absURL }}">タイトル一覧</a>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <details>
+                <summary id="side_column_area_head">DL配信タイトル（海外対応）</summary>
+                <!--サイト内の全タグをループする-->
+                {{- range $termName, $entries := .Site.Taxonomies.tags }}
+                <details>
+                    <!--タグ名表示する-->
+                    <summary id="side_column_area_tag">{{ strings.ToUpper $termName }}</summary>
+                    <!--タグが一致するページでループ-->
+                    {{  range $page := $entries.Pages }}
+                        <!--DL配信タイトルを表示する-->
+                        {{ if eq $page.Section "overseasdownloadtitles" }}
+                            <a href="{{ .RelPermalink }}" id="side_column_area_title">{{ $page.Title }}</a><br />
+                        {{ end }}
+                    {{ end }}
+                </details>
+                {{ end }}
+            </details>
+        </div>
+        <div>
+            <!--タイトル一覧にはルートindex.htmlからの絶対パスでリンク指定-->
+            <a href="{{ "overseasdownloadtitles/index.html" | absURL }}">タイトル一覧</a>
         </div>
     </div>
 </div>
