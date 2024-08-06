@@ -1,7 +1,10 @@
 ---
 title: "Back to the Future - Episode 1： It's About Time"
 draft: false
+categories: [  ]
 tags: [ "アドベンチャー" ]
+is_online: false
+stopped_server: false
 ---
 
 ### タイトル {.deco_background #title}

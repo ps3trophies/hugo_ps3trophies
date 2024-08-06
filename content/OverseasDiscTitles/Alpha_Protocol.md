@@ -1,7 +1,10 @@
 ---
 title: "Alpha Protocol"
 draft: false
+categories: [  ]
 tags: [ "アクションRPG" ]
+is_online: false
+stopped_server: false
 ---
 
 ### タイトル {.deco_background #title}

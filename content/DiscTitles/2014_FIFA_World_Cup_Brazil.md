@@ -1,7 +1,10 @@
 ---
 title: "2014 FIFA World Cup Brazil"
 draft: false
+categories: [ "FIFAシリーズ" ]
 tags: [ "スポーツ" ]
+is_online: false
+stopped_server: false
 ---
 
 ### タイトル {.deco_background #title}
