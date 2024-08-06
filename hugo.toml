@@ -2,9 +2,6 @@ baseURL = 'https://trophy-wiki.github.io/ps3trophies/'
 languageCode = 'ja-jp'
 title = 'PS3トロフィーまとめWiki'
 
-# disqusのID（使ってない）
-disqusShortname = "https-ps3trophies-github-io"
-
 # フロントマターで配列を扱う際のユーザー定義。デフォでcategoriesとtagsはある
 [taxonomies]
   category = 'categories'
