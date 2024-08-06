@@ -1,0 +1,35 @@
+
+・TOP右カラムを(side_column.html)を一覧ページへのリンクに変える
+・タイトル個別ページにも表示する
+
+
+・シリーズ一覧ページ作成(series_list.html)
+フロントマターcategoriesに設定
+.Site.Taxonomies.categoriesで全カテゴリ(シリーズ一覧)が取得できるので、シリーズごとにページリンクを表示する
+
+{{ range $termName, $entries := .Site.Taxonomies.categories }}
+{{ range $page := $entries.Pages }}
+
+たぶんこれでいけるはず。
+
+
+・ジャンルごとのタイトル一覧ページを作成(genre_title_list.html)
+.Site.Taxonomies.tagsで全タグ(ジャンル)取得できるので、上部でジャンル列挙してページ内リンクに。
+
+{{ range $termName, $entries := .Site.Taxonomies.tags }}
+{{ range $page := $entries.Pages }}
+一覧はこれで、ジャンルごとに折りたたみにする。
+
+
+・名前順のタイトル一覧ページを作成(order_title_list.html)
+
+
+・タイトル一覧ページそれぞれにオンライン対応か、サーバー停止済みかを表示する
+
+ページ一覧でrange回してるときに
+.Param.is_online
+.Param.stopped_server
+で取得できるはずなので、真偽で〇、✔、空欄などに分岐させる
+
+
+・ページの編集方法に、ページの書き方を記載する
